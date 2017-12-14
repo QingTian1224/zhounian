@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宝贝！！ 一周年啦我们</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">from</span><br />
+			<span class="space"/><span class="comments">2016—12-24</span><br />
+			<span class="space"/><span class="comments">2017-12-24</span><br />
+			<span class="space"/><span class="comments"></span><br />
+			Girl name = <span class="keyword">董</span>晴<br />
+			Boy name = <span class="keyword">窦</span>天欣<br />
+			<span class="comments">从去年的今天到现在</span><br />
+			已经过去了整整一年的时间<br />
+			<span class="comments">这中间我们发生了好多好多事</span><br />
+			有开心<br />
+			<span class="comments">有感动</span><br />
+			也有不愉快<br />
+			<span class="comments">但不管发生什么</span><br />
+			哪怕吵得不可开交<br />
+			<span class="comments">我都没有想过和你分开</span><br />
+			<span class="comments">上次你说因为吵架所以不知道继续在一起的意义</span><br />
+			<span class="keyword">我想说的是</span>世界上会有一对情侣<span class="keyword">一生不会吵架么</span>;<br />
+			<span class="keyword">当然不会啦</span>所以啊<span class="keyword">傻妞</span>
+			<span class="keyword"/><span class="comments"> 吵架是一定会有的嘛</span><br />
+			<span class="keyword"/><span class="comments">世界上怎么会有人在一起这么久还不闹别扭的呢</span><br />
+			<span class="keyword"/>偶尔吵一下也不错嘛  你说呢<br />
+			<span class="comments">最后  我想对你说的是</span><br />
+			<br>
+			<br>
+			请坚坚定定的拉着我的手<br />
+			永远都不放弃<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					&nbsp;&nbsp;亲爱的，看着时间一秒一秒的走过
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					有没有感觉十分的微妙<br/>
+					<div class="signature">- 爱你的老公</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 11, 23);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
